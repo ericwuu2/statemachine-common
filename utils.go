@@ -7,8 +7,8 @@ import (
 
 type GameProcess struct {
 	statemachine.Machine
-	IsLogin      bool
-	IsDisconnect bool
+	IsLogin   bool
+	IsConnect bool
 }
 
 func (gameProcess *GameProcess) NotifyTriggers() {
@@ -16,4 +16,13 @@ func (gameProcess *GameProcess) NotifyTriggers() {
 }
 func (gameProcess *GameProcess) GetIsLogin() bool {
 	return gameProcess.IsLogin
+}
+func (gameProcess *GameProcess) GetIsConnect() bool {
+	return gameProcess.IsConnect
+}
+func (gameProcess *GameProcess) TestTrue() bool {
+	return true
+}
+func (gameProcess *GameProcess) TestFalse() bool {
+	return false
 }
