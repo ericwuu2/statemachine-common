@@ -26,3 +26,6 @@ func (gameProcess *GameProcess) TestTrue() bool {
 func (gameProcess *GameProcess) TestFalse() bool {
 	return false
 }
+func (gameProcess *GameProcess) Echo() {
+	fmt.Println("Hello I'm GameProcess")
+}
